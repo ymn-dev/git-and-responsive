@@ -59,6 +59,7 @@ body {
 
 .card {
   width: 300px;
+  height: fit-content;
   margin: 8px;
   border: 1px solid #ccc;
   border-radius: 5px;
