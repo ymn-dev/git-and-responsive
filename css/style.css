@@ -64,12 +64,13 @@ body {
   display: flex;
   flex-wrap: wrap;
   width: 100%;
+  row-gap: 8px;
 }
 
 .card {
   width: 300px;
   height: fit-content;
-  margin: 8px;
+  margin-left: 8px;
   border: 1px solid #ccc;
   border-radius: 5px;
   padding: 10px;
@@ -84,7 +85,10 @@ body {
   .main {
     flex-direction: column;
   }
-
+  .main__wrapper {
+    display: flex;
+    flex-direction: column;
+  }
   .navbar {
     justify-content: center;
   }
@@ -100,5 +104,19 @@ body {
 
   .card {
     width: 100%;
+  }
+}
+@media only screen and (min-width: 961px) {
+  /* Move Card 1 to the second position in the flex order, making it take the space of two cards */
+  .order-1 {
+    order: 2;
+  }
+
+  /* Move Card 3 to the first position in the flex order, making it take the space of two cards */
+  .order-3 {
+    order: 1;
+  }
+  .article {
+    flex-wrap: wrap-reverse;
   }
 }
